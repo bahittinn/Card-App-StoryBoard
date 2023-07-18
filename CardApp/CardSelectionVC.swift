@@ -9,6 +9,7 @@ import UIKit
 
 class CardSelectionVC: UIViewController {
     
+    /// Variables
     @IBOutlet weak var cardImageView: UIImageView!
     @IBOutlet var buttons: [UIButton]!
     var cards: [UIImage] = Card.allValues
@@ -26,6 +27,7 @@ class CardSelectionVC: UIViewController {
         super.viewWillDisappear(animated)
         timer.invalidate()
     }
+    //MARK: - Timer function
     func startTimer() {
         timer = Timer.scheduledTimer(timeInterval: 0.1,
                                      target: self,
@@ -38,6 +40,7 @@ class CardSelectionVC: UIViewController {
         cardImageView.image = cards.randomElement() ?? UIImage(named: "AS")
     }
     
+    //MARK: - Buttons Tapped
     @IBAction func stopButtonTapped(_ sender: UIButton) {
         timer.invalidate()
     }

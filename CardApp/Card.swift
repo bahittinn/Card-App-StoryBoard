@@ -7,6 +7,7 @@
 
 import UIKit
 
+//MARK: - Image Assets
 struct Card {
     static var allValues = [
         UIImage(named: "2H")!,
