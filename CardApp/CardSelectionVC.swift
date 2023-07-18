@@ -23,6 +23,7 @@ class CardSelectionVC: UIViewController {
             button.layer.cornerRadius = 8
         }
     }
+    //MARK: - View will disapppear
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         timer.invalidate()
